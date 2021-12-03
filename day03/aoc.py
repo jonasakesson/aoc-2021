@@ -28,7 +28,7 @@ def getSolutionPart2(data):
         else:
             bit = "0"
 
-        oxygen = filter(lambda number: number[i] != bit, oxygen)
+        oxygen = [number for number in oxygen if number[i] == bit]
         if len(oxygen) == 1:
             oxygen = int(oxygen[0], 2)
             break
@@ -41,7 +41,7 @@ def getSolutionPart2(data):
         else:
             bit = "0"
 
-        co2 = filter(lambda number: number[i] != bit, co2)
+        co2 = [number for number in co2 if number[i] == bit]
         if len(co2) == 1:
             co2 = int(co2[0], 2)
             break
